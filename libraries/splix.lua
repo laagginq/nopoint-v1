@@ -383,7 +383,7 @@ do
         --
         theme.accent = accent
         --
-        local window = {pages = {}, isVisible = false, uibind = Enum.KeyCode.Z, currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil}}
+        local window = {pages = {}, isVisible = false, uibind = Enum.KeyCode.RightShift, currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil}}
         --
         local main_frame = utility:Create("Frame", {Vector2.new(0,0)}, {
             Size = utility:Size(0, size.X, 0, size.Y),
@@ -780,7 +780,7 @@ do
                 library.shared.ping = stats.Network:FindFirstChild("ServerStatsItem") and tostring(math.floor(stats.Network.ServerStatsItem["Data Ping"]:GetValue())) or "Unknown"
                 --
                 if (tick() - Tick) > 0.15 then
-                    watermark_title.Text = string.format("r3zkoclient | Ping : %s | Fps : %u", library.shared.ping, library.shared.fps)
+                    watermark_title.Text = string.format("NoPoint | Ping : %s | Fps : %u", library.shared.ping, library.shared.fps)
                     window.watermark:UpdateSize()
                     --
                     Tick = tick()
