@@ -20,9 +20,9 @@ local library = {
     ended = {},
     colors = {},
     folders = {
-        main = "NoPointWS",
-        assets = "NoPointWS/assets",
-        configs = "NoPointWS/configs"
+        main = "nopoint",
+        assets = "nopoint/assets",
+        configs = "nopoint/configs"
     },
     shared = {
         initialized = false,
