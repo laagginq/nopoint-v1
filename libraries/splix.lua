@@ -1397,8 +1397,8 @@ do
         end
         --
         function window:Cursor(info)
-           --[[ window.cursor = {}
-            --
+            window.cursor = {}
+            --[[
             local cursor = utility:Create("Triangle", nil, {
                 Color = theme.cursoroutline,
                 Thickness = 2.5,
@@ -1433,9 +1433,9 @@ do
                 cursor_inline.PointA = Vector2.new(mouseLocation.X, mouseLocation.Y)
                 cursor_inline.PointB = Vector2.new(mouseLocation.X + 12, mouseLocation.Y + 4)
                 cursor_inline.PointC = Vector2.new(mouseLocation.X + 4, mouseLocation.Y + 12)
-            end)
+            end)]]
             --
-            return window.cursor]]
+            return window.cursor
         end
         --
         function window:AllowClickThrough()
@@ -1500,7 +1500,7 @@ do
             window:Watermark()
             window:KeybindsList()
             window:StatusList()
-            --window:Cursor()
+            window:Cursor()
             --
             window:Fade()
         end
