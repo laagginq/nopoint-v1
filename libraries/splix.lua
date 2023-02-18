@@ -1500,7 +1500,7 @@ do
             window:Watermark()
             window:KeybindsList()
             window:StatusList()
-            window:Cursor()
+            --window:Cursor()
             --
             window:Fade()
         end
