@@ -1458,8 +1458,6 @@ do
                 end
             end)
             --
-            window.cursor["cursor"].Transparency = window.isVisible and 1 or 0
-            window.cursor["cursor_inline"].Transparency = window.isVisible and 1 or 0
 
             if window.isVisible then
                 local set_back = false
@@ -1500,9 +1498,9 @@ do
             window:Watermark()
             window:KeybindsList()
             window:StatusList()
+            window:Fade()
             window:Cursor()
             --
-            window:Fade()
         end
         --
         library.began[#library.began + 1] = function(Input)
