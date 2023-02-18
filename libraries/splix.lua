@@ -1397,7 +1397,7 @@ do
         end
         --
         function window:Cursor(info)
-            window.cursor = {}
+           --[[ window.cursor = {}
             --
             local cursor = utility:Create("Triangle", nil, {
                 Color = theme.cursoroutline,
@@ -1435,7 +1435,7 @@ do
                 cursor_inline.PointC = Vector2.new(mouseLocation.X + 4, mouseLocation.Y + 12)
             end)
             --
-            return window.cursor
+            return window.cursor]]
         end
         --
         function window:AllowClickThrough()
