@@ -516,13 +516,15 @@ do
         end
         --
         function window:LoadConfig(config)
-            local config = hs:JSONDecode(config)
-            --
-            for i,v in next, config do
-                if library.pointers[i] then
-                    library.pointers[i]:set(v)
+            pcall(function()
+                local config = hs:JSONDecode(config)
+                --
+                for i,v in next, config do
+                    if library.pointers[i] then
+                        library.pointers[i]:set(v)
+                    end
                 end
-            end
+            end)
         end
         --
         function window:Move(vector)
